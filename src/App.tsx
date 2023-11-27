@@ -1,8 +1,8 @@
 import React from "react";
 import {SafeAreaView, View, Text,Image, StyleSheet,TouchableOpacity} from "react-native";
-import HeaderContainer from "./HeaderContainer";
-import ButtonContainer from "./ButtonContainer";
-import MenuContainer from "./MenuContainer";
+import HeaderContainer from "./Header";
+import ButtonContainer from "./Button";
+import MenuContainer from "./Menu2";
 import Menu from "./Menu";
 
 function App(){

@@ -1,24 +1,24 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View, Image, Text, TouchableOpacity, } from "react-native"
+import { SafeAreaView, StyleSheet, View, Image, Text } from "react-native"
 function Card (){
     return(
         <SafeAreaView style={styles.area}>
             <View style={styles.header}>
-              <Image source={require('./assets/icons/group.png')}/>
+              <Image source={require('./assets/images/Group.png')}/>
               <Text style={styles.text}>Credit / Debit Card</Text>
             </View>
             <View>
             <Image source={require('./assets/images/Card.png')}/>
             </View>
-            <View style={styles.cam}>
-            <Image source={require('./assets/icons/camera.png')}/>
+            <View style={styles.camera}>
+            <Image source={require('./assets/images/photo.png')}/>
             </View>
             <View style={styles.small}>
             <View>
               <Text style={styles.text1}>Name on card</Text>
             </View>
             <View style={styles.names}>
-              <Text style={styles.name}>Zahra Gualiyeva</Text>
+              <Text style={styles.name}>Mamedova Mehpara</Text>
             </View>
             <View>y
               <Text style={styles.text2}>Card number</Text>
@@ -28,7 +28,7 @@ function Card (){
             </View>
             </View>
             <View style={styles.medium}>
-            <View style={styles.sol}>
+            <View style={styles.left}>
             <View>
               <Text style={styles.text3}>Expiry date</Text>
             </View>
@@ -36,18 +36,15 @@ function Card (){
               <Text style={styles.date}>04/22</Text>
             </View>
             </View>
-            <View style={styles.sag}>
+            <View style={styles.right}>
             <View>
               <Text style={styles.text4}>CVC</Text>
             </View>
-            <View style={styles.cvcs}>
-              <Text style={styles.cvc}>474 <Image source={require('./assets/icons/Hint.png')}/></Text>
+            <View style={styles.CVCs}>
+              <Text style={styles.CVC}>474 <Image source={require('./assets/images/Hint.png')}/></Text>
             </View>
             </View>
             </View>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.words}>Use this card</Text>
-            </TouchableOpacity>
         </SafeAreaView>
     )
 }
@@ -64,13 +61,14 @@ const styles=StyleSheet.create({
       alignItems:"center",
     },
     text:{
-      color:"black",
-      fontSize:22,
-      fontWeight:"600",
       marginLeft:22,
       lineHeight:28,
+      fontSize:22,
+      color:"black",
+      fontWeight:"600",
+      
     },
-    cam:{
+    camera:{
       alignSelf:"center",
     },
     text1:{
@@ -81,22 +79,23 @@ const styles=StyleSheet.create({
     names:{
       flex:0.6,
       borderWidth:1,
-      marginLeft:24,
-      width:"86%",
-      marginTop:5,
       justifyContent:"center",
+      marginLeft:24,     
+      marginTop:5,     
       borderRadius:10,
       borderColor:"grey",
+      width:"86%",
     },
     name:{
       fontSize:16,
       marginLeft:10,
     },
     text2:{
-      fontSize:14,
-      fontWeight:"400",
       marginLeft:24,
       marginTop:8,
+      fontSize:14,
+      fontWeight:"400",
+      
     },
     numbers:{
       flex:0.6,
@@ -117,9 +116,9 @@ const styles=StyleSheet.create({
     },
     text3:{
       fontSize:14,
-      fontWeight:"400",
       marginLeft:24,
-      marginTop:8,
+      marginTop:8, 
+      fontWeight:"400",
     },
     dates:{
       flex:0.6,
@@ -141,7 +140,7 @@ const styles=StyleSheet.create({
       marginLeft:4,
       marginTop:8,
     },
-    cvcs:{
+    CVCs:{
       flex:0.6,
       borderWidth:1,
       marginLeft:5,
@@ -151,7 +150,7 @@ const styles=StyleSheet.create({
       borderRadius:10,
       borderColor:"grey",
     },
-    cvc:{
+    CVC:{
       fontSize:18,
       marginLeft:10,
     },
@@ -160,10 +159,10 @@ const styles=StyleSheet.create({
       justifyContent:"space-between",
       height:120,
     },
-    sol:{
+    left:{
       width:"50%"
     },
-    sag:{
+    right:{
       width:"50%",
     }
 })
